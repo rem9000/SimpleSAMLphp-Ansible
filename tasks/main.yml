@@ -58,30 +58,30 @@
   ansible.builtin.lineinfile:
     path: /var/simplesamlphp/config-templates/config.php
     regexp: "'baseurlpath' =>"
-    line:    'baseurlpath' => 'https://{{ baseurl }}/simplesaml/',
+    line:    "'baseurlpath' => 'https://{{ baseurl }}/simplesaml/',"
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
     path: /var/simplesamlphp/config-templates/config.php
     regexp: "'auth.adminpassword' =>"
-    line:    'auth.adminpassword' => '{{ authadmin }}',
+    line:    "'auth.adminpassword' => '{{ authadmin }}',"
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
     path: /var/simplesamlphp/config-templates/config.php
     regexp: "'secretsalt' =>"
-    line:    'secretsalt' => '{{  secretsalt }}',
+    line:    "'secretsalt' => '{{  secretsalt }}',"
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
     path: /var/simplesamlphp/config-templates/config.php
     regexp: "'technicalcontact_email' =>"
-    line:    'technicalcontact_email' => '{{ contactmail }}',
+    line:    "'technicalcontact_email' => '{{ contactmail }}',"
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
     path: /var/simplesamlphp/config-templates/config.php
     regexp: "'timezone' =>"
-    line:    'timezone' => 'Europe/Amsterdam',
+    line:    "'timezone' => 'Europe/Amsterdam',"
 
     
