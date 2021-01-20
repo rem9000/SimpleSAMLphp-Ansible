@@ -108,5 +108,5 @@
 - name: a2ensite
   raw:  sudo a2ensite simplesamlphp.conf 
 
-  - name: relstart apache2
+- name: restart apache2
   raw: systemctl restart apache2
