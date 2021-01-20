@@ -18,23 +18,23 @@
     - git
     - apache2
     - curl
-    - php7.2
-    - php7.2-common
-    - php7.2-date
-    - php7.2-dom
-    - php7.2-hash
-    - php7.2-libxml
-    - php7.2-openssl
-    - php7.2-pcre
-    - php7.2-SPL
-    - php7.2-zlib
-    - php7.2-json
-    - php7.2-mbstring
-    - php7.2-cURL
-    - php7.2-ldap
-    - php7.2-radius
-    - php7.2-session
-    - php7.2-memcache
+    - php
+    - php-common
+    - php-date
+    - php-dom
+    - php-hash
+    - php-libxml
+    - php-openssl
+    - php-pcre
+    - php-SPL
+    - php-zlib
+    - php-json
+    - php-mbstring
+    - php-cURL
+    - php-ldap
+    - php-radius
+    - php-session
+    - php-memcache
 
 - name: Download and unzip package
   unarchive:
