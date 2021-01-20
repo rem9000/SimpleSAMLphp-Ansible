@@ -61,8 +61,8 @@
     dest: /etc/apache2/sites-available/simplesamlphp.conf
     mode: '0644'
 
-- name: Apache symbolic link
-  raw: ln -s /etc/apache2/sites-available/simplesamlphp.conf /etc/apache2/sites-enabled/
+#- name: Apache symbolic link
+#  raw: ln -s /etc/apache2/sites-available/simplesamlphp.conf /etc/apache2/sites-enabled/
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
