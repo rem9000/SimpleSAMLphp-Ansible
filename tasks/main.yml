@@ -34,7 +34,7 @@
  #   - php-hash
  #   - php-libxml
  #   - php-openssl
-    - php-pcre
+ #   - php-pcre
     - php-SPL
     - php-zlib
     - php-json
