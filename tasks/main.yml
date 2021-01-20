@@ -65,11 +65,15 @@
     dest: /etc/apache2/sites-available/simplesamlphp.conf
     mode: '0644'
 
-- name: Create a symbolic link
-  file:
-    src: /etc/apache2/sites-available/simplesamlphp.conf
-    dest: /etc/apache2/sites-enabled/
-    state: link
+#- name: Create a symbolic link
+#  file:
+#    src: /etc/apache2/sites-available/simplesamlphp.conf
+#    dest: /etc/apache2/sites-enabled/
+#    state: link
+
+#- name: Apache symbolic link
+#  raw: ln -s /etc/apache2/sites-available/simplesamlphp.conf /etc/apache2/sites-enabled/
+
 
 - name: Update SimpleSAMLphp config
   lineinfile:
