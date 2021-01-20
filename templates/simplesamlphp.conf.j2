@@ -10,3 +10,16 @@
                 Require all granted
             </Directory>
     </VirtualHost>
+
+        <VirtualHost *:443>
+            ServerName {{ servername }}
+            DocumentRoot /var/simplesamlphp/simplesamlphp-1.18.8/www/
+
+            SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/simplesamlphp-1.18.8/config
+
+            Alias /simplesaml /var/simplesamlphp/simplesamlphp-1.18.8/www
+
+            <Directory /var/simplesamlphp/simplesamlphp-1.18.8/www>
+                Require all granted
+            </Directory>
+    </VirtualHost>
