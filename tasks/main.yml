@@ -14,7 +14,36 @@
   raw: sudo apt update
 
 
-
+#- name: "Install packages"
+#  apt:
+#    name: "{{ packages }}"
+#    update_cache: yes
+#    state: present
+#  vars:
+#    packages:
+#    - zip
+#    - software-properties-common
+#    - unzip
+#    - git
+#    - apache2
+#    - curl
+#    - php
+#    - php-common
+#    - php-date
+#    - php-dom
+ #   - php-hash
+ #   - php-libxml
+ #   - php-openssl
+ #   - php-pcre
+ #   - php-SPL
+ #   - php-zlib
+ #   - php-json
+ #   - php-mbstring
+ #   - php-cURL
+ #   - php-ldap
+ #   - php-radius
+ #   - php-session
+ #   - php-memcache
 
 - name: mkdir
   raw: mkdir /var/simplesamlphp
@@ -30,8 +59,6 @@
   template:
     src: simplesamlphp.conf.j2
     dest: /etc/apache2/sites-available/simplesamlphp.conf
-    owner: bin
-    group: wheel
     mode: '0644'
 
 - name: Apache symbolic link
