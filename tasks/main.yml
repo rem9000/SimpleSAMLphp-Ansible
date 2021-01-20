@@ -28,22 +28,22 @@
     - git
     - apache2
     - curl
-    - php5.6
-    - php5.6-common
-    - php5.6-date
-    - php5.6-dom
-    - php5.6-hash
-    - php5.6-libxml
-    - php5.6-openssl
-    - php5.6-pcre
-    - php5.6-SPL
-    - php5.6-zlib
-    - php5.6-json
-    - php5.6-mbstring
-    - php5.6-cURL
-    - php5.6-ldap
-    - php5.6-radius
-    - php5.6-session
+    - php7.4
+    - php7.4-common
+    - php7.4-date
+    - php7.4-dom
+    - php7.4-hash
+    - php7.4-libxml
+    - php7.4-openssl
+    - php7.4-pcre
+    - php7.4-SPL
+    - php7.4-zlib
+    - php7.4-json
+    - php7.4-mbstring
+    - php7.4-cURL
+    - php7.4-ldap
+    - php7.4-radius
+    - php7.4-session
     - php7.4-memcache
 
 - name: Download and unzip package
