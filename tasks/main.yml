@@ -8,10 +8,8 @@
 - name: Test
   raw: sudo apt install software-properties-common
 
-- name: Test2
-  raw: sudo add-apt-repository ppa:ondrej/php
 
-  - name: Add specified repository into sources list
+- name: Add specified repository into sources list
     apt_repository:
       repo: ppa:ondrej/php
       state: present
