@@ -33,7 +33,7 @@
     - php-dom
  #   - php-hash
  #   - php-libxml
-    - php-openssl
+ #   - php-openssl
     - php-pcre
     - php-SPL
     - php-zlib
