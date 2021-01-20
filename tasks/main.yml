@@ -22,7 +22,6 @@
     - php-common
     - php-date
     - php-dom
-    - php-hash
     - php-libxml
     - php-openssl
     - php-pcre
