@@ -5,6 +5,15 @@
 # File: tasks/mail.yml
 #
 
+- name: Test
+  raw: sudo apt install software-properties-common
+
+- name: Test2
+  raw: sudo add-apt-repository ppa:ondrej/php
+
+- name: Test3
+  raw: sudo apt update
+
 
 - name: "Install packages"
   apt:
