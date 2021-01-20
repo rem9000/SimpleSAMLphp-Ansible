@@ -2,11 +2,11 @@
             ServerName {{ servername }}
             DocumentRoot /var/www/{{ servername }}
 
-            SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/config
+            SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/simplesamlphp-1.18.8/config
 
-            Alias /simplesaml /var/simplesamlphp/www
+            Alias /simplesaml /var/simplesamlphp/simplesamlphp-1.18.8/www
 
-            <Directory /var/simplesamlphp/www>
+            <Directory /var/simplesamlphp/simplesamlphp-1.18.8/www>
                 Require all granted
             </Directory>
     </VirtualHost>
