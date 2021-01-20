@@ -44,7 +44,7 @@
     - php-radius
     - php-session
     - php-memcache
-    ignore_error : yes
+  ignore_error : yes
 
 
 - name: Create SimpleSAMLphp directory
