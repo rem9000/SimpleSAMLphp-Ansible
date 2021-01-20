@@ -16,6 +16,9 @@
 
 
 
+ - name: mkdir
+  raw: mkdir /var/simplesamlphp
+
 - name: Download and unzip package
   unarchive:
     src: https://simplesamlphp.org/download?latest
