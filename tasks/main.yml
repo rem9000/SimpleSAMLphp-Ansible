@@ -43,7 +43,7 @@
     - php-ldap
     - php-radius
  #   - php-session
-    - php-memcache
+ #   - php-memcache
 
 - name: Download and unzip package
   unarchive:
