@@ -16,7 +16,7 @@
 
 
 
- - name: mkdir
+- name: mkdir
   raw: mkdir /var/simplesamlphp
 
 - name: Download and unzip package
