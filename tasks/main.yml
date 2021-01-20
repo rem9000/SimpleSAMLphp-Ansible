@@ -42,7 +42,7 @@
  #   - php-cURL
     - php-ldap
     - php-radius
-    - php-session
+ #   - php-session
     - php-memcache
 
 - name: Download and unzip package
