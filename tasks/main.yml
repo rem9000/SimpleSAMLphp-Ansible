@@ -78,7 +78,7 @@
   lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'baseurlpath' =>"
-    line:    "'baseurlpath' => 'https://{{ baseurl }}/',"
+    line:    "'baseurlpath' => 'http://{{ baseurl }}/',"
 
 - name: Update SimpleSAMLphp config
   lineinfile:
