@@ -7,7 +7,7 @@
 
 
 - name: Add nginx stable repository from PPA and install its signing key on Ubuntu target
-  ansible.builtin.apt_repository:
+  apt_repository:
     repo: ppa:ondrej/php
 
 - name: apt update
@@ -45,8 +45,12 @@
  #   - php-session
  #   - php-memcache
 
-#- name: mkdir
-#  raw: mkdir /var/simplesamlphp
+
+- name: Create SimpleSAMLphp directory
+  file:
+    path: /var/simplesamlphp
+    state: directory
+    mode: '0755'
 
 - name: Download and unzip package
   unarchive:
@@ -61,37 +65,48 @@
     dest: /etc/apache2/sites-available/simplesamlphp.conf
     mode: '0644'
 
-#- name: Apache symbolic link
-#  raw: ln -s /etc/apache2/sites-available/simplesamlphp.conf /etc/apache2/sites-enabled/
+- name: Create a symbolic link
+  file:
+    src: /etc/apache2/sites-available/simplesamlphp.conf
+    dest: /etc/apache2/sites-enabled/
+    state: link
 
 - name: Update SimpleSAMLphp config
-  ansible.builtin.lineinfile:
+  lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'baseurlpath' =>"
     line:    "'baseurlpath' => 'https://{{ baseurl }}/simplesaml/',"
 
 - name: Update SimpleSAMLphp config
-  ansible.builtin.lineinfile:
+  lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'auth.adminpassword' =>"
     line:    "'auth.adminpassword' => '{{ authadmin }}',"
 
 - name: Update SimpleSAMLphp config
-  ansible.builtin.lineinfile:
+  lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'secretsalt' =>"
     line:    "'secretsalt' => '{{  secretsalt }}',"
 
 - name: Update SimpleSAMLphp config
-  ansible.builtin.lineinfile:
+  lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'technicalcontact_email' =>"
     line:    "'technicalcontact_email' => '{{ contactmail }}',"
 
 - name: Update SimpleSAMLphp config
-  ansible.builtin.lineinfile:
+  lineinfile:
     path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'timezone' =>"
     line:    "'timezone' => 'Europe/Amsterdam',"
 
     
+- name: a2dissite
+  raw:  sudo a2dissite 000-default.conf 
+
+- name: a2ensite
+  raw:  sudo a2ensite simplesamlphp.conf 
+
+  - name: relstart apache2
+  raw: systemctl restart apache2
