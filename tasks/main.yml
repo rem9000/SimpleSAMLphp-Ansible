@@ -8,11 +8,9 @@
 - name: Test
   raw: sudo apt install software-properties-common
 
-
-- name: Add specified repository into sources list
-    apt_repository:
-      repo: ppa:ondrej/php
-      state: present
+- name: Add nginx stable repository from PPA and install its signing key on Ubuntu target
+  ansible.builtin.apt_repository:
+    repo: ppa:ondrej/php
 
 - name: Test3
   raw: sudo apt update
