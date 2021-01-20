@@ -45,8 +45,8 @@
  #   - php-session
  #   - php-memcache
 
-- name: mkdir
-  raw: mkdir /var/simplesamlphp
+#- name: mkdir
+#  raw: mkdir /var/simplesamlphp
 
 - name: Download and unzip package
   unarchive:
