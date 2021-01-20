@@ -35,11 +35,11 @@
  #   - php-libxml
  #   - php-openssl
  #   - php-pcre
-    - php-SPL
-    - php-zlib
-    - php-json
-    - php-mbstring
-    - php-cURL
+ #   - php-SPL
+ #   - php-zlib
+ #   - php-json
+ #   - php-mbstring
+ #   - php-cURL
     - php-ldap
     - php-radius
     - php-session
