@@ -32,7 +32,7 @@
     - php-date
     - php-dom
  #   - php-hash
-    - php-libxml
+ #   - php-libxml
     - php-openssl
     - php-pcre
     - php-SPL
