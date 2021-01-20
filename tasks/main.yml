@@ -66,7 +66,7 @@
 
 - name: Update SimpleSAMLphp config
   ansible.builtin.lineinfile:
-    path: /var/simplesamlphp/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
     regexp: "'baseurlpath' =>"
     line:    "'baseurlpath' => 'https://{{ baseurl }}/simplesaml/',"
 
