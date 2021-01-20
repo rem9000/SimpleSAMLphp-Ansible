@@ -76,31 +76,31 @@
 
 - name: Update SimpleSAMLphp config
   lineinfile:
-    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'baseurlpath' =>"
     line:    "'baseurlpath' => 'https://{{ baseurl }}/simplesaml/',"
 
 - name: Update SimpleSAMLphp config
   lineinfile:
-    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'auth.adminpassword' =>"
     line:    "'auth.adminpassword' => '{{ authadmin }}',"
 
 - name: Update SimpleSAMLphp config
   lineinfile:
-    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'secretsalt' =>"
     line:    "'secretsalt' => '{{  secretsalt }}',"
 
 - name: Update SimpleSAMLphp config
   lineinfile:
-    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'technicalcontact_email' =>"
     line:    "'technicalcontact_email' => '{{ contactmail }}',"
 
 - name: Update SimpleSAMLphp config
   lineinfile:
-    path: /var/simplesamlphp/simplesamlphp-1.18.8/config-templates/config.php
+    path: /var/simplesamlphp/simplesamlphp-1.18.8/config/config.php
     regexp: "'timezone' =>"
     line:    "'timezone' => 'Europe/Amsterdam',"
 
