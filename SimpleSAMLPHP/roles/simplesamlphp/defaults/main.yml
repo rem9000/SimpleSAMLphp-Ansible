@@ -1,6 +1,0 @@
-servername  : 'saml.example.com'
-baseurl     : 'saml.example.com'
-authadmin   : 'Password123'
-secretsalt  : '12345678901234567890123456789012'
-contactmail : 'email@example.com'
-timezone    : 'Europe/Amsterdam'
