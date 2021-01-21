@@ -46,6 +46,26 @@
     - php-memcache
   ignore_errors : yes
 
+- name: "Apache2 enable SSL module"
+  apache2_module:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - log_config
+    - proxy
+    - proxy_http
+    - proxy_wstunnel
+    - ssl
+
+
+- name: "Configure Firewall"
+  ufw:
+    rule: allow
+    proto: tcp
+    port: "{{ item }}"
+  with_items:
+    - "80"
+    - "443"
 
 - name: Create SimpleSAMLphp directory
   file:
